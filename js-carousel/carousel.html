@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel | JS</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div class="carousel">
+        <div class="slider" id="slider">
+<img src="https://fastly.picsum.photos/id/102/600/400.jpg?hmac=RcZTmQGQ3_PNwFj2j4nhiKeke8kRD6Lo-HU-KzKYPuY" alt="">
+<img src="https://fastly.picsum.photos/id/89/600/400.jpg?hmac=OuMHKHKhdQsuQjkukJyXZPLTEdbf_-xnGqQGnQ7MP10" alt="">
+<img src="https://fastly.picsum.photos/id/1080/600/400.jpg?hmac=x6VSJgL8ihhTa5t-CAeZHGX2A4bLWVMFwXHgNidIDhw" alt="">
+<img src="https://fastly.picsum.photos/id/1070/600/400.jpg?hmac=YfiwtecESQKmUMkPZ0PJkQqX9GQBPmXgaPRjZgnFg3g" alt="">
+<img src="https://fastly.picsum.photos/id/575/600/400.jpg?hmac=6AsAnS9-eZGiQrwueMtSAqVEUyl7VoeHYXF5UK8RLaE" alt="">
+<img src="https://fastly.picsum.photos/id/1011/600/400.jpg?hmac=P-0XQN_D6cUNPz1xucR5G5QjMkTjsGIJIVXOKqk5_dI" alt="">
+
+
+        </div>
+        <div class="controls">
+
+
+            <button 
+
+                  onclick="
+             slideNumber--
+
+             if(slideNumber < 0){
+            slider.style.transform = 'translateX(-'+slideNumber*(6*600)+'px)'
+             slideNumber = 5
+             }
+           slider.style.transform = 'translateX(-'+slideNumber*600+'px)'
+            "
+            
+            >&lt;</button>
+            <button 
+            onclick="
+             slideNumber++
+
+             if(slideNumber > 5){
+                slideNumber = 0
+             }
+            slider.style.transform = 'translateX(-'+slideNumber*600+'px)'
+            "
+            
+            >&gt;</button>
+            
+        </div>
+    </div>
+    <script src="carousel.js"></script>
+</body>
+</html>
